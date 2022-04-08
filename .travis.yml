@@ -27,3 +27,7 @@ script:
   - java --version
   - mvn clean install
   - mvn test
+
+
+name: Codecov
+uses: codecov/codecov-action@v3.0.0
