@@ -19,6 +19,11 @@
 language: java
 
 jdk: openjdk8
+
+name: Codecov
+uses: codecov/codecov-action@v3.0.0
+
+
 cache:
   directories:
     - $HOME/.m2
@@ -29,11 +34,10 @@ script:
   - mvn cobertura:cobertura
   - mvn clean package
   - mvn test
-
-
-name: Codecov
-uses: codecov/codecov-action@v3.0.0
-
-after_success:
   - bash <(curl -s https://codecov.io/bash)
   - curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
+
+
+
+
+#after_success:
