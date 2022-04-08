@@ -17,9 +17,13 @@
 #mvn surefire-report:report
 arch: amd64
 language: java
+
 jdk: openjdk8
+cache:
+  directories:
+    - $HOME/.m2
 sudo: false
 script:
   - java --version
-  - ./mvnw clean install
-  - ./mvnw test
+  - ./mvn clean install
+  - ./mvn test
