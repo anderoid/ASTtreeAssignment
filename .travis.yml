@@ -15,10 +15,10 @@
 #mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 #mvn test -B
 #mvn surefire-report:report
-arch: amd64
+#arch: amd64
 language: java
 
-jdk: oraclejdk15
+jdk: openjdk8
 cache:
   directories:
     - $HOME/.m2

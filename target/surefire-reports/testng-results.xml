@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-08T15:11:49Z" name="Surefire suite" finished-at="2022-04-08T15:11:50Z" duration-ms="1000">
+  <suite name="Surefire suite" duration-ms="256" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
     <groups>
     </groups>
-    <test started-at="2022-04-08T15:11:49Z" name="Surefire test" finished-at="2022-04-08T15:11:50Z" duration-ms="1000">
+    <test name="Surefire test" duration-ms="256" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
       <class name="org.example.BoomTest">
-        <test-method signature="test_JUnit()" started-at="2022-04-08T15:11:50Z" name="test_JUnit" finished-at="2022-04-08T15:11:50Z" duration-ms="166" status="PASS">
+        <test-method status="PASS" signature="test_JUnit()" name="test_JUnit" duration-ms="0" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_JUnit -->
       </class> <!-- org.example.BoomTest -->
+      <class name="org.example.AVLTreeUnitTest">
+        <test-method status="PASS" signature="givenSampleTree_whenFindNotExistingKeyCalled_shouldReturnNull()" name="givenSampleTree_whenFindNotExistingKeyCalled_shouldReturnNull" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenSampleTree_whenFindNotExistingKeyCalled_shouldReturnNull -->
+        <test-method status="PASS" signature="givenSampleTree_whenInsertCalled_treeShouldBeAvl()" name="givenSampleTree_whenInsertCalled_treeShouldBeAvl" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenSampleTree_whenInsertCalled_treeShouldBeAvl -->
+        <test-method status="PASS" signature="givenEmptyTree_whenHeightCalled_shouldReturnMinus1()" name="givenEmptyTree_whenHeightCalled_shouldReturnMinus1" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenEmptyTree_whenHeightCalled_shouldReturnMinus1 -->
+        <test-method status="PASS" signature="givenEmptyTree_whenDeleteCalled_treeShouldBeAvl()" name="givenEmptyTree_whenDeleteCalled_treeShouldBeAvl" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenEmptyTree_whenDeleteCalled_treeShouldBeAvl -->
+        <test-method status="PASS" signature="givenEmptyTree_whenInsertCalled_treeShouldBeAvl()" name="givenEmptyTree_whenInsertCalled_treeShouldBeAvl" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenEmptyTree_whenInsertCalled_treeShouldBeAvl -->
+        <test-method status="PASS" signature="givenSampleTree_whenDeleteCalled_treeShouldBeAvl()" name="givenSampleTree_whenDeleteCalled_treeShouldBeAvl" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenSampleTree_whenDeleteCalled_treeShouldBeAvl -->
+        <test-method status="PASS" signature="givenEmptyTree_whenInsertCalled_heightShouldBeZero()" name="givenEmptyTree_whenInsertCalled_heightShouldBeZero" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenEmptyTree_whenInsertCalled_heightShouldBeZero -->
+        <test-method status="PASS" signature="givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode()" name="givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode" duration-ms="47" started-at="2022-04-08T21:06:15Z" finished-at="2022-04-08T21:06:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode -->
+      </class> <!-- org.example.AVLTreeUnitTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
