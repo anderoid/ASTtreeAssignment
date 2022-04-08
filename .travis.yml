@@ -1,17 +1,25 @@
+#language: java
+#jdk: openjdk8
+#script:
+#  - jdk_switcher use openjdk10
+#  - # do stuff with OpenJDK 10
+#  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+#  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+#  - export JAVA_HOME=$HOME/openjdk11
+#  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
+#  - ./mvnw clean install
+#
+#cache:
+#  directories:
+#    - $HOME/.m2
+#mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+#mvn test -B
+#mvn surefire-report:report
+arch: amd64
 language: java
 jdk: openjdk8
+sudo: false
 script:
-  - jdk_switcher use openjdk10
-  - # do stuff with OpenJDK 10
-  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
-  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
-  - export JAVA_HOME=$HOME/openjdk11
-  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
+  - java --version
   - ./mvnw clean install
-
-cache:
-  directories:
-    - $HOME/.m2
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-mvn test -B
-mvn surefire-report:report
+  - ./mvnw test
