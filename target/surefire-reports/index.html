@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">10 methods,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
                     <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.example.AVLTreeUnitTest" hash-for-method="duplicateExceptionTest">duplicateExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="org.example.AVLTreeUnitTest" hash-for-method="givenEmptyTree_whenDeleteCalled_treeShouldBeAvl">givenEmptyTree_whenDeleteCalled_treeShouldBeAvl</a> <!-- method navigator-link -->
@@ -178,6 +183,13 @@
               <span class="class-name">org.example.AVLTreeUnitTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="duplicateExceptionTest">
+                  </a> <!-- duplicateExceptionTest -->
+                  <span class="method-name">duplicateExceptionTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="givenEmptyTree_whenDeleteCalled_treeShouldBeAvl">
@@ -288,48 +300,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'givenSampleTree_whenFindNotExistingKeyCalled_shouldReturnNull')
+data.setCell(0, 1, 'givenSampleTree_whenInsertCalled_treeShouldBeAvl')
 data.setCell(0, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(0, 3, 47);
+data.setCell(0, 3, 63);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'givenSampleTree_whenInsertCalled_treeShouldBeAvl')
+data.setCell(1, 1, 'givenEmptyTree_whenDeleteCalled_treeShouldBeAvl')
 data.setCell(1, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(1, 3, 47);
+data.setCell(1, 3, 62);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'givenEmptyTree_whenHeightCalled_shouldReturnMinus1')
+data.setCell(2, 1, 'givenSampleTree_whenDeleteCalled_treeShouldBeAvl')
 data.setCell(2, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(2, 3, 47);
+data.setCell(2, 3, 60);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'givenEmptyTree_whenDeleteCalled_treeShouldBeAvl')
+data.setCell(3, 1, 'givenEmptyTree_whenHeightCalled_shouldReturnMinus1')
 data.setCell(3, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(3, 3, 47);
+data.setCell(3, 3, 59);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'givenEmptyTree_whenInsertCalled_treeShouldBeAvl')
+data.setCell(4, 1, 'duplicateExceptionTest')
 data.setCell(4, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(4, 3, 47);
+data.setCell(4, 3, 58);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'givenSampleTree_whenDeleteCalled_treeShouldBeAvl')
+data.setCell(5, 1, 'givenSampleTree_whenFindNotExistingKeyCalled_shouldReturnNull')
 data.setCell(5, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(5, 3, 47);
+data.setCell(5, 3, 56);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'givenEmptyTree_whenInsertCalled_heightShouldBeZero')
+data.setCell(6, 1, 'givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode')
 data.setCell(6, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(6, 3, 47);
+data.setCell(6, 3, 55);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode')
+data.setCell(7, 1, 'givenEmptyTree_whenInsertCalled_heightShouldBeZero')
 data.setCell(7, 2, 'org.example.AVLTreeUnitTest')
-data.setCell(7, 3, 47);
+data.setCell(7, 3, 54);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'test_JUnit')
-data.setCell(8, 2, 'org.example.BoomTest')
-data.setCell(8, 3, 0);
+data.setCell(8, 1, 'givenEmptyTree_whenInsertCalled_treeShouldBeAvl')
+data.setCell(8, 2, 'org.example.AVLTreeUnitTest')
+data.setCell(8, 3, 47);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'test_JUnit')
+data.setCell(9, 2, 'org.example.BoomTest')
+data.setCell(9, 3, 1);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 376 ms</span>
+              <span class="suite-total-time">Total running time: 515 ms</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -373,6 +389,10 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">duplicateExceptionTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">givenEmptyTree_whenHeightCalled_shouldReturnMinus1</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
@@ -393,7 +413,7 @@ return data;
               <div class="chronological-class-name">org.example.BoomTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">test_JUnit</span>
-                <span class="method-start">47 ms</span>
+                <span class="method-start">69 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

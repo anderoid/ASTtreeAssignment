@@ -2,6 +2,9 @@ package org.example;
 
 import org.junit.Assert;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+
 
 public class AVLTreeUnitTest {
 
@@ -63,12 +66,28 @@ public class AVLTreeUnitTest {
         Assert.assertTrue(isAVL(tree, tree.getRoot()));
     }
 
+
+    @Test
+    public void duplicateExceptionTest() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert(2);
+        try {
+            tree.insert(2);
+        }catch(Exception e ){
+            assertEquals(e.getMessage(),"duplicate Key!");
+//            System.out.println(e.getMessage());
+        }
+
+
+    }
+
     private boolean isAVL(AVLTree tree) {
         return isAVL(tree, tree.getRoot());
     }
 
     private boolean isAVL(AVLTree tree, AVLTree.Node node) {
-        if ( node == null )
+        if (node == null)
             return true;
         int balance = tree.getBalance(node);
         return (balance <= 1 && balance >= -1) && isAVL(tree, node.left) && isAVL(tree, node.right);

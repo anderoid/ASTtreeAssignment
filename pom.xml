@@ -35,7 +35,6 @@
     </reporting>
 
 
-
     <repositories>
         <repository>
             <id>apache-staging</id>
@@ -200,7 +199,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-version}</version>
                 <configuration>
-<!--                    <release>11</release>-->
+
+                                        <source>1.8</source>
+                                        <target>1.8</target>
+                    <!--                    <release>11</release>-->
                     <excludes>
                         <exclude>org/example/spring/*</exclude>
                     </excludes>
