@@ -24,14 +24,14 @@ name: Codecov
 uses: codecov/codecov-action@v3.0.0
 
 
-cache:
-  directories:
-    - $HOME/.m2
+#cache:
+#  directories:
+#    - $HOME/.m2
 sudo: false
 script:
-  - java --version
+  - java -version
   - mvn clean install
-  - mvn cobertura:cobertura
+#  - mvn cobertura:cobertura
   - mvn clean package
   - mvn test
   - bash <(curl -s https://codecov.io/bash)
