@@ -7,6 +7,7 @@
     <name>ASTTreeAssignment Tapestry 5 Application</name>
     <packaging>jar</packaging>
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <tapestry-version>5.8.1</tapestry-version>
         <jackson-version>2.13.1</jackson-version>
@@ -22,6 +23,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <evosuiteVersion>1.0.6</evosuiteVersion>
+
     </properties>
 
     <reporting>
@@ -166,6 +169,14 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-standalone-runtime</artifactId>
+            <version>${evosuiteVersion}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -283,6 +294,39 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.evosuite.plugins</groupId>
+                <artifactId>evosuite-maven-plugin</artifactId>
+                <version>${evosuiteVersion}</version>
+                <executions><execution>
+                    <goals> <goal> prepare </goal> </goals>
+                    <phase> process-test-classes </phase>
+                </execution></executions>
+            </plugin>
+
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.evosuite.runtime.InitializingListener</value>
+                        </property>
+                    </properties>
+                </configuration>
+            </plugin>
+
+
+
+
+
+
 
         </plugins>
     </build>
