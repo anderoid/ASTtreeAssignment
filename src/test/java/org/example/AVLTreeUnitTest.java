@@ -80,21 +80,30 @@ public class AVLTreeUnitTest {
     }
 
     @Test
-    public void insertLeftRightTest(){
+    public void insertLeftRightTest() {
         AVLTree tree = new AVLTree();
 
-        tree.insert(10) ;
-        tree.insert(20) ;
-        tree.insert(30) ;
-        tree.insert(40) ;
-        tree.insert(50) ;
-        tree.insert(25) ;
-
-
-
-
-
+        tree.insert(10);
+        tree.insert(20);
+        tree.insert(30);
+        tree.insert(40);
+        tree.insert(50);
+        tree.insert(25);
     }
+
+    @Test
+    public void insertGoodLeftCoverRight() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert(40);
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(25);
+        tree.insert(30);
+        tree.insert(22);
+        tree.insert(50);
+    }
+
 
     private boolean isAVL(AVLTree tree) {
         return isAVL(tree, tree.getRoot());
