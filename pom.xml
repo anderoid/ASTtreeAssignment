@@ -211,8 +211,8 @@
                 <version>${maven-compiler-version}</version>
                 <configuration>
 
-                                        <source>1.8</source>
-                                        <target>1.8</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <!--                    <release>11</release>-->
                     <excludes>
                         <exclude>org/example/spring/*</exclude>
@@ -234,11 +234,11 @@
                         <artifactId>surefire-junit-platform</artifactId>
                         <version>${maven-surefire-version}</version>
                     </dependency>
-<!--                    <dependency>-->
-<!--                        <groupId>org.apache.maven.surefire</groupId>-->
-<!--                        <artifactId>surefire-testng</artifactId>-->
-<!--                        <version>${maven-surefire-version}</version>-->
-<!--                    </dependency>-->
+                    <!--                    <dependency>-->
+                    <!--                        <groupId>org.apache.maven.surefire</groupId>-->
+                    <!--                        <artifactId>surefire-testng</artifactId>-->
+                    <!--                        <version>${maven-surefire-version}</version>-->
+                    <!--                    </dependency>-->
                 </dependencies>
             </plugin>
             <plugin>
@@ -300,12 +300,15 @@
                 <groupId>org.evosuite.plugins</groupId>
                 <artifactId>evosuite-maven-plugin</artifactId>
                 <version>${evosuiteVersion}</version>
-                <executions><execution>
-                    <goals> <goal> prepare </goal> </goals>
-                    <phase> process-test-classes </phase>
-                </execution></executions>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare</goal>
+                        </goals>
+                        <phase>process-test-classes</phase>
+                    </execution>
+                </executions>
             </plugin>
-
 
 
             <plugin>
@@ -321,11 +324,6 @@
                     </properties>
                 </configuration>
             </plugin>
-
-
-
-
-
 
 
         </plugins>
