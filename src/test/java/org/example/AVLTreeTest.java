@@ -43,14 +43,14 @@ public class AVLTreeTest {
         tree.insert(newKey);
         Assert.assertTrue(isAdelsonCheck(tree));
     }
-//
-//    @Test
-//    public void givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode() {
-//        AVLTree tree = getSampleAVLTree();
-//        int existingKey = 2;
-//        AVLTree.Node result = tree.find(existingKey);
-//        Assert.assertEquals(result.key, existingKey);
-//    }
+
+    @Test
+    public void givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode() {
+        AVLTree tree = getSampleAVLTree();
+        int existingKey = 2;
+        AVLTree.Node result = tree.find(existingKey);
+        Assert.assertEquals(result.key, existingKey);
+    }
 
 
 
