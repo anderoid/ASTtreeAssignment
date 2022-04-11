@@ -55,9 +55,13 @@ public class AVLTreeTest {
 
 
     @Test
-    public void givenSampleTree_whenDeleteCalled_treeShouldBeAvl() {
-        AVLTree tree = getSampleAVLTree();
-        tree.delete(1);
+    public void treeShouldBeAVLEvenAfterDeletion() {
+        AVLTree tree = new AVLTree() ;
+
+        for(int i = 0 ;i<6;i++){
+            tree.insert(i) ;
+        }
+        tree.delete(3);
         Assert.assertTrue(isAdelsonCheck(tree, tree.getRoot()));
     }
 
