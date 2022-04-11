@@ -26,7 +26,7 @@ public class AVLTreeTest {
     }
 
     @Test
-    public void givenEmptyTree_whenInsertCalled_treeShouldBeAvl() {
+    public void treeIsAVLEvenAfterInsertion2Items() {
         AVLTree tree = new AVLTree();
         int[] intArray = new int[]{-1, 34};
 
@@ -37,23 +37,12 @@ public class AVLTreeTest {
     }
 
 
-
-//    @Test
-//    public void givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode() {
-//        AVLTree tree = getSampleAVLTree();
-//        int existingKey = 2;
-//        AVLTree.Node result = tree.find(existingKey);
-//        Assert.assertEquals(result.key, existingKey);
-//    }
-
-
-
     @Test
     public void treeShouldBeAVLEvenAfterDeletion() {
-        AVLTree tree = new AVLTree() ;
+        AVLTree tree = new AVLTree();
 
-        for(int i = 0 ;i<6;i++){
-            tree.insert(i) ;
+        for (int i = 0; i < 6; i++) {
+            tree.insert(i);
         }
         tree.delete(3);
         Assert.assertTrue(isAdelsonCheck(tree, tree.getRoot()));
@@ -88,13 +77,14 @@ public class AVLTreeTest {
     public void insertGoodLeftCoverRight() {
         AVLTree tree = new AVLTree();
 
-        tree.insert(40);
-        tree.insert(20);
-        tree.insert(10);
-        tree.insert(25);
-        tree.insert(30);
-        tree.insert(22);
-        tree.insert(50);
+        int[] intArray = new int[]{40, 20, 10, 25, 30, 22, 50};
+
+        for(int i : intArray){
+            tree.insert(i);
+        }
+
+        Assert.assertTrue(isAdelsonCheck(tree, tree.getRoot()));
+
     }
 
 
@@ -117,12 +107,6 @@ public class AVLTreeTest {
         }
     }
 
-    private AVLTree getSampleAVLTree() {
-        AVLTree avlTree = new AVLTree();
-        for (int i = 0; i < 10; i++)
-            avlTree.insert(i);
-            return avlTree;
-    }
 
     public static boolean debug = false;
 
