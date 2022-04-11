@@ -8,41 +8,41 @@ import static org.junit.Assert.assertEquals;
 
 public class AVLTreeTest {
 
-//    @Test
-//    public void emptyTreeTest() {
-//        AVLTree tree = new AVLTree();
-//        Assert.assertTrue(tree.height() == -1);
-//    }
-//
-//    @Test
-//    public void emptyTreeWith2InsertsShouldGiveHeight1() {
-//        AVLTree tree = new AVLTree();
-//        int[] intArray = new int[]{-1, 34};
-//
-//        for (int i : intArray) {
-//            tree.insert(i);
-//        }
-//        assertEquals(1, tree.height());
-//    }
-//
-//    @Test
-//    public void givenEmptyTree_whenInsertCalled_treeShouldBeAvl() {
-//        AVLTree tree = new AVLTree();
-//        int[] intArray = new int[]{-1, 34};
-//
-//        for (int i : intArray) {
-//            tree.insert(i);
-//        }
-//        Assert.assertTrue(isAdelsonCheck(tree));
-//    }
-//
-//    @Test
-//    public void givenSampleTree_whenInsertCalled_treeShouldBeAvl() {
-//        AVLTree tree = getSampleAVLTree();
-//        int newKey = 11;
-//        tree.insert(newKey);
-//        Assert.assertTrue(isAdelsonCheck(tree));
-//    }
+    @Test
+    public void emptyTreeTest() {
+        AVLTree tree = new AVLTree();
+        Assert.assertTrue(tree.height() == -1);
+    }
+
+    @Test
+    public void emptyTreeWith2InsertsShouldGiveHeight1() {
+        AVLTree tree = new AVLTree();
+        int[] intArray = new int[]{-1, 34};
+
+        for (int i : intArray) {
+            tree.insert(i);
+        }
+        assertEquals(1, tree.height());
+    }
+
+    @Test
+    public void givenEmptyTree_whenInsertCalled_treeShouldBeAvl() {
+        AVLTree tree = new AVLTree();
+        int[] intArray = new int[]{-1, 34};
+
+        for (int i : intArray) {
+            tree.insert(i);
+        }
+        Assert.assertTrue(isAdelsonCheck(tree));
+    }
+
+    @Test
+    public void givenSampleTree_whenInsertCalled_treeShouldBeAvl() {
+        AVLTree tree = getSampleAVLTree();
+        int newKey = 11;
+        tree.insert(newKey);
+        Assert.assertTrue(isAdelsonCheck(tree));
+    }
 //
 //    @Test
 //    public void givenSampleTree_whenFindExistingKeyCalled_shouldReturnMatchedNode() {
@@ -51,84 +51,84 @@ public class AVLTreeTest {
 //        AVLTree.Node result = tree.find(existingKey);
 //        Assert.assertEquals(result.key, existingKey);
 //    }
-//
-//
-//
-//    @Test
-//    public void treeShouldBeAVLEvenAfterDeletion() {
-//        AVLTree tree = new AVLTree() ;
-//
-//        for(int i = 0 ;i<6;i++){
-//            tree.insert(i) ;
-//        }
-//        tree.delete(3);
-//        Assert.assertTrue(isAdelsonCheck(tree, tree.getRoot()));
-//    }
-//
-//
-//    @Test
-//    public void duplicateExceptionTest() {
-//        AVLTree tree = new AVLTree();
-//
-//        tree.insert(2);
-//        try {
-//            tree.insert(2);
-//        } catch (Exception e) {
-//            assertEquals(e.getMessage(), "duplicate Key!");
-//        }
-//    }
-//
-//    @Test
-//    public void insertLeftRightTest() {
-//        AVLTree tree = new AVLTree();
-//
-//        tree.insert(10);
-//        tree.insert(20);
-//        tree.insert(30);
-//        tree.insert(40);
-//        tree.insert(50);
-//        tree.insert(25);
-//    }
-//
-//    @Test
-//    public void insertGoodLeftCoverRight() {
-//        AVLTree tree = new AVLTree();
-//
-//        tree.insert(40);
-//        tree.insert(20);
-//        tree.insert(10);
-//        tree.insert(25);
-//        tree.insert(30);
-//        tree.insert(22);
-//        tree.insert(50);
-//    }
-//
-//
-//    private boolean isAdelsonCheck(AVLTree tree) {
-//        return isAdelsonCheck(tree, tree.getRoot());
-//    }
-//
-//    private boolean isAdelsonCheck(AVLTree tree, AVLTree.Node node) {
-//        if (node == null)
-//            return true;
-//        int b_factor = tree.getBalance(node);
-//
-//        if (b_factor >= -1 && b_factor <= 1) {
-//            if (isAdelsonCheck(tree, node.left)) {
-//                return isAdelsonCheck(tree, node.right);
-//            }
-//            return false;
-//        } else {
-//            return false;
-//        }
-//    }
-//
-//    private AVLTree getSampleAVLTree() {
-//        AVLTree avlTree = new AVLTree();
-//        for (int i = 0; i < 10; i++)
-//            avlTree.insert(i);
-//            return avlTree;
-//    }
+
+
+
+    @Test
+    public void treeShouldBeAVLEvenAfterDeletion() {
+        AVLTree tree = new AVLTree() ;
+
+        for(int i = 0 ;i<6;i++){
+            tree.insert(i) ;
+        }
+        tree.delete(3);
+        Assert.assertTrue(isAdelsonCheck(tree, tree.getRoot()));
+    }
+
+
+    @Test
+    public void duplicateExceptionTest() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert(2);
+        try {
+            tree.insert(2);
+        } catch (Exception e) {
+            assertEquals(e.getMessage(), "duplicate Key!");
+        }
+    }
+
+    @Test
+    public void insertLeftRightTest() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert(10);
+        tree.insert(20);
+        tree.insert(30);
+        tree.insert(40);
+        tree.insert(50);
+        tree.insert(25);
+    }
+
+    @Test
+    public void insertGoodLeftCoverRight() {
+        AVLTree tree = new AVLTree();
+
+        tree.insert(40);
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(25);
+        tree.insert(30);
+        tree.insert(22);
+        tree.insert(50);
+    }
+
+
+    private boolean isAdelsonCheck(AVLTree tree) {
+        return isAdelsonCheck(tree, tree.getRoot());
+    }
+
+    private boolean isAdelsonCheck(AVLTree tree, AVLTree.Node node) {
+        if (node == null)
+            return true;
+        int b_factor = tree.getBalance(node);
+
+        if (b_factor >= -1 && b_factor <= 1) {
+            if (isAdelsonCheck(tree, node.left)) {
+                return isAdelsonCheck(tree, node.right);
+            }
+            return false;
+        } else {
+            return false;
+        }
+    }
+
+    private AVLTree getSampleAVLTree() {
+        AVLTree avlTree = new AVLTree();
+        for (int i = 0; i < 10; i++)
+            avlTree.insert(i);
+            return avlTree;
+    }
 
     public static boolean debug = false;
 
