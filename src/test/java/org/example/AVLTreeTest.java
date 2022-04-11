@@ -13,7 +13,6 @@ public class AVLTreeTest {
         AVLTree tree = new AVLTree();
         Assert.assertTrue(tree.height() == -1);
     }
-
     @Test
     public void emptyTreeWith2InsertsShouldGiveHeight1() {
         AVLTree tree = new AVLTree();
@@ -61,17 +60,6 @@ public class AVLTreeTest {
         }
     }
 
-//    @Test
-//    public void insertLeftRightTest() {
-//        AVLTree tree = new AVLTree();
-//
-//        tree.insert(10);
-//        tree.insert(20);
-//        tree.insert(30);
-//        tree.insert(40);
-//        tree.insert(50);
-//        tree.insert(25);
-//    }
 
     @Test
     public void insertGoodLeftCoverRight() {
@@ -79,7 +67,7 @@ public class AVLTreeTest {
 
         int[] intArray = new int[]{40, 20, 10, 25, 30, 22, 50};
 
-        for(int i : intArray){
+        for (int i : intArray) {
             tree.insert(i);
         }
 
